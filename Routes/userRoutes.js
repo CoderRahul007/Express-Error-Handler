@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
-const fetchController = require('../Controllers/fetchData.controller');
+const { wrappedFetchData } = require('../Controllers/fetchData.controller');
 
-router.get("/fetch", fetchController.fetchData);
+router.get("/fetch", wrappedFetchData);
 
 module.exports = router;
